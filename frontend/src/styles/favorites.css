@@ -1,0 +1,56 @@
+.favorites-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4CAF50;
+  margin-top: 2rem;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background: #45a049;
+}
+
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.part-card {
+  background: #444;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.part-card h3 {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.part-details p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.part-details span {
+  color: #fff;
+  font-weight: 500;
+}

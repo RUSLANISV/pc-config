@@ -1,0 +1,35 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+extend-exclude = [".venv", "frontend/node_modules"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D203", "D213", "COM812", "CPY001"]
+allowed-confusables = ["а", "А", "б", "В", "г", "е", "Е", "З", "К", "М", "Н", "о", "О", "р", "Р", "с", "С", "Т", "у", "У", "х", "Х", "ь"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.black]
+target-version = ["py312"]
+line-length = 88
+extend-exclude = 'frontend/node_modules|\.venv'
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+exclude = ['^\.venv/', '^frontend/node_modules/']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--strict-config --strict-markers"
+
+[tool.coverage.run]
+source = ["backend"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 80
